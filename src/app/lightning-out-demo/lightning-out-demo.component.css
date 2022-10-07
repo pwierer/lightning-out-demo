@@ -1,5 +1,6 @@
 main {
-  border: 3px dashed red;
+  border: 3px dashed blue;
   min-height: 600px;
   text-align: center;
+  margin: 30px;
 }
