@@ -16,13 +16,21 @@ export class LightningOutDemoComponent implements OnInit {
   }
 
   initLightningOut() {
-    $Lightning.use("c:LightningOutContainer", // name of the Lightning app
-      function() { // Callback once framework and app loaded
+    $Lightning.use('c:LightningOutContainer',
+      function() {
         $Lightning.createComponent(
-          "c:basicComponent", // top-level component of your app
-          {}, // attributes to set on the component when created
-          document.querySelector('#lightningLocator'), // the DOM location to insert the component
-          function(cmp: any) { // callback when component is created and active on the page
+          'c:basicComponent',
+          {},
+          document.querySelector('#basic'),
+          function(cmp: any) {
+
+          }
+        );
+        $Lightning.createComponent(
+          'c:editAccountForm',
+          {},
+          document.querySelector('#account-form'),
+          function(cmp: any) {
 
           }
         );
